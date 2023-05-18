@@ -21,29 +21,30 @@
     android:title="@string/firmware_version"
     settings:keywords="@string/keywords_android_version">
 
-    <!-- Arrow logo -->
-    <com.android.settingslib.widget.LayoutPreference
-        android:key="arrow_logo"
-        android:layout="@layout/arrow_logo"
-        android:selectable="false"/>
-
-    <!-- Android version
+    <!-- Android version -->
     <Preference
         android:key="os_firmware_version"
         android:title="@string/firmware_version"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
         settings:searchable="false"
-        settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController"/>-->
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController"/>
 
-    <!-- Arrow version -->
+    <!-- ShirayukiProject version -->
     <Preference
-        android:key="arrow_version"
-        android:title="@string/arrow_version"
+        android:key="yuki_version"
+        android:title="@string/yuki_version"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
-        settings:searchable="false"
-        settings:controller="com.android.settings.deviceinfo.firmwareversion.ArrowVersionDetailPreferenceController"/>
+        settings:controller="com.android.settings.deviceinfo.yukiprjkt.YukiVersionPreferenceController"/>
+
+    <!-- ShirayukiProject maintainer -->
+    <Preference
+        android:key="maintainer"
+        android:title="@string/maintainer"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.yukiprjkt.YukiMaintainerPreferenceController"/>
 
     <!-- Device name -->
     <Preference
@@ -52,6 +53,14 @@
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.AboutDeviceNamePreferenceController"/>
+
+    <!-- Phone Specs -->
+    <Preference
+        android:key="phone_specs"
+        android:title="@string/specs_title"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.yukiprjkt.PotatoSpecsPreferenceController"/>
 
     <!-- Security patch -->
     <Preference
