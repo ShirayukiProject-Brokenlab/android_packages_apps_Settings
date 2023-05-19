@@ -24,5 +24,19 @@
     <string name="changelog_title">Changelog</string>
     <string name="changelog_summary">Since the last update</string>
     <string name="changelog_error">Unable to load changelog</string>
-    
+
+    <!-- Import ShirayukiProject xdroidUI Style-->
+    <string name="yuki_device_name">Device Name</string>
+    <string name="yuki_device_name_summary">Unknown</string>
+    <string name="yuki_chipset_type">Chipset</string>
+    <string name="yuki_chipset_type_summary">Unknown</string>
+    <string name="yuki_gpu">GPU</string>
+    <string name="yuki_gpu_summary">Unknown</string>
+    <string name="yuki_camera_mp">Camera</string>
+    <string name="yuki_camera_mp_summary">Unknown</string>
+    <string name="yuki_screen_type">Screen</string>
+    <string name="yuki_screen_type_summary">Unknown</string>
+    <string name="yuki_maintainer">Maintainer</string>
+    <string name="yuki_maintainer_summary">Unknown, but thanks for building!</string>
+
 </resources>
