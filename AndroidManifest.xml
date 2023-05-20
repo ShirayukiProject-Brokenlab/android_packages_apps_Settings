@@ -4585,6 +4585,38 @@
             </intent-filter>
         </activity>
 
+        <!-- YukiSpace -->
+        <activity android:name=".Settings$YukiSpaceActivity"
+            android:label="@string/yukispace_title"
+            android:icon="@drawable/ic_yuki_icon"
+            android:parentActivityName="com.android.settings"
+            android:exported="true">
+            <intent-filter android:priority="69">
+                <action android:name="com.android.settings.YukiSpace" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.android.settings.SHORTCUT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.yukiprjkt.yukispace.YukiSpace" />
+            <meta-data android:name="com.android.settings.HIGHLIGHT_MENU_KEY"
+                android:value="@string/menu_key_yuki"/>
+        </activity>
+
+        <activity android:name=".Settings$GamingModeActivity"
+                  android:label="@string/gaming_mode_tile_title"
+                  android:icon="@drawable/ic_yaap_settings_icon"
+                  android:exported="true">
+            <intent-filter android:priority="69">
+                <action android:name="com.android.settings.GAMING_MODE_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.settings.gaming.GamingModeFragment" />
+        </activity>
+
         <!-- Seedvault -->
         <activity android:name=".backup.transport.TransportActivity"
                   android:label="@string/backup_transport_title"
