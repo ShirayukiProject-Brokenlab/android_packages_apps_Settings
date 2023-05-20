@@ -112,23 +112,23 @@
             android:layout_alignStart="@id/yuki_about_phone_header_screen"
 			style="@style/yuki_text_secondary"/>
         <TextView
-			android:id="@+id/xd_about_phone_header_maintainer"
+			android:id="@+id/yuki_about_phone_header_maintainer"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
-			android:text="@string/xd_maintainer"
-			android:layout_below="@id/xd_about_phone_header_camera_desc"
-            android:layout_alignStart="@id/xd_about_phone_header_camera_desc"
-			style="@style/xd_text_primary"/>
+			android:text="@string/yuki_maintainer"
+			android:layout_below="@id/yuki_about_phone_header_camera_desc"
+            android:layout_alignStart="@id/yuki_about_phone_header_camera_desc"
+			style="@style/yuki_text_primary"/>
 		<TextView
-			android:id="@+id/xd_about_phone_header_maintainer_desc"
+			android:id="@+id/yuki_about_phone_header_maintainer_desc"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
 			android:layout_marginBottom="12dp"
-			android:text="@string/xd_maintainer_summary"
+			android:text="@string/yuki_maintainer_summary"
 			android:singleLine="true"
-			android:layout_below="@id/xd_about_phone_header_screen"
-            android:layout_alignStart="@id/xd_about_phone_header_screen"
-			style="@style/xd_text_secondary"/>
+			android:layout_below="@id/yuki_about_phone_header_screen"
+            android:layout_alignStart="@id/yuki_about_phone_header_screen"
+			style="@style/yuki_text_secondary"/>
 
     </RelativeLayout>
 
