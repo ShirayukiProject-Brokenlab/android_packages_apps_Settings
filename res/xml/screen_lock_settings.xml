@@ -27,14 +27,6 @@
         android:key="visiblepattern"
         android:title="@string/lockpattern_settings_enable_visible_pattern_title" />
 
-    <SwitchPreference
-        android:key="visible_error_pattern"
-        android:title="@string/lockpattern_settings_enable_error_path_title"/>
-
-    <SwitchPreference
-        android:key="visibledots"
-        android:title="@string/lockpattern_settings_enable_dots_title"/>
-
     <!-- available in pin/pattern/password -->
     <com.android.settings.display.TimeoutListPreference
         android:key="lock_after_timeout"
@@ -47,5 +39,12 @@
     <SwitchPreference
         android:key="power_button_instantly_locks"
         android:title="@string/lockpattern_settings_enable_power_button_instantly_locks" />
+
+    <!-- Always available -->
+    <com.yukiprjkt.yukispace.preferences.SecureSettingSwitchPreference
+        android:key="qstile_requires_unlocking"
+        android:title="@string/qstile_requires_unlocking_title"
+        android:summary="@string/qstile_requires_unlocking_summary"
+        android:defaultValue="true"/>
 
 </PreferenceScreen>
