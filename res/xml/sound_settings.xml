@@ -78,8 +78,7 @@
         android:icon="@drawable/ic_notifications"
         android:title="@string/notification_volume_option_title"
         android:order="-150"
-        settings:controller=
-            "com.android.settings.notification.NotificationVolumePreferenceController"/>
+        settings:controller="com.android.settings.notification.NotificationVolumePreferenceController"/>
 
     <!-- Alarm volume -->
     <com.android.settings.notification.VolumeSeekBarPreference
@@ -88,7 +87,7 @@
         android:title="@string/alarm_volume_option_title"
         android:order="-140"
         settings:controller="com.android.settings.notification.AlarmVolumePreferenceController"/>
-x
+
     <!-- TODO(b/174964721): make this a PrimarySwitchPreference -->
     <!-- Interruptions -->
     <com.android.settingslib.RestrictedPreference
@@ -138,6 +137,29 @@ x
         settings:controller="com.android.settings.sound.MediaControlsParentPreferenceController"
         settings:keywords="@string/keywords_media_controls"/>
 
+    <SwitchPreference
+        android:key="volume_panel_on_left"
+        android:title="@string/volume_panel_on_left_title"
+        android:summary="@string/volume_panel_on_left_summary"
+        android:order="-98" />
+
+    <SwitchPreference
+        android:key="volume_panel_on_left_land"
+        android:title="@string/volume_panel_on_left_land_title"
+        android:summary="@string/volume_panel_on_left_land_summary"
+        android:order="-97" />
+
+    <!-- Volume dialog timeout -->
+    <com.yukiprjkt.yukispace.preferences.CustomSeekBarPreference
+        android:key="volume_dialog_timeout"
+        android:title="@string/volume_dialog_timeout_title"
+        android:summary="@string/volume_dialog_timeout_summary"
+        android:order="-95"
+        android:max="7"
+        android:min="1"
+        settings:defaultValue="3"
+        settings:units="@string/unit_seconds" />
+
     <!-- Also vibration -->
     <Preference
         android:fragment="com.android.settings.accessibility.VibrationSettings"
@@ -146,6 +168,22 @@ x
         android:order="-90"
         settings:controller="com.android.settings.accessibility.VibrationPreferenceController"
         settings:keywords="@string/keywords_vibration"/>
+
+    <ListPreference
+        android:key="vibration_pattern"
+        android:title="@string/vibration_pattern_title"
+        android:order="-85"
+        android:entries="@array/vibration_pattern_entries"
+        android:entryValues="@array/vibration_pattern_values"/>
+
+    <!-- Custom ringtone vibration pattern preference -->
+    <Preference
+        android:key="custom_vibration_pattern"
+        android:title="@string/custom_vibration_pattern_title"
+        android:summary="@string/custom_vibration_pattern_summary"
+        android:order="-83"
+        android:fragment="com.android.settings.sound.CustomVibrationPreferenceFragment"
+        android:visibility="gone"/>
 
     <com.android.settingslib.PrimarySwitchPreference
         android:key="gesture_prevent_ringing_sound"
@@ -163,6 +201,22 @@ x
         android:ringtoneType="notification"
         android:order="-70"/>
 
+    <ListPreference
+        android:key="notification_vibration_pattern"
+        android:title="@string/notification_vibration_pattern_title"
+        android:entries="@array/notification_vibration_pattern_entries"
+        android:entryValues="@array/vibration_pattern_values"
+        android:order="-67" />
+
+    <!-- Custom notification vibration pattern preference -->
+    <Preference
+        android:key="custom_notification_vibration_pattern"
+        android:title="@string/custom_vibration_pattern_title"
+        android:summary="@string/custom_vibration_pattern_summary"
+        android:fragment="com.android.settings.sound.CustomNotificationVibrationPreferenceFragment"
+        android:visibility="gone"
+        android:order="-63" />
+
     <!-- Default alarm ringtone -->
     <com.android.settings.DefaultRingtonePreference
         android:key="alarm_ringtone"
@@ -179,17 +233,17 @@ x
         android:title="@string/dial_pad_tones_title"
         android:order="-50"/>
 
+    <!-- In-call notifications -->
+    <SwitchPreference
+        android:key="in_call_notifications"
+        android:title="@string/in_call_notifications_title"
+        android:order="-47"/>
+
     <!-- Screen locking sounds -->
     <SwitchPreference
         android:key="screen_locking_sounds"
         android:title="@string/screen_locking_sounds_title"
         android:order="-45"/>
-
-    <!-- Screenshot sound -->
-    <SwitchPreference
-        android:key="screenshot_shutter_sound"
-        android:title="@string/screenshot_shutter_sound_title"
-        android:order="-43"/>
 
     <!-- Charging sounds -->
     <SwitchPreference
@@ -209,13 +263,17 @@ x
         android:title="@string/touch_sounds_title"
         android:order="-30"/>
 
-    <!-- Volume panel to left -->
-    <com.arrow.support.preferences.SecureSettingSwitchPreference
-        android:key="volume_panel_on_left"
-        android:title="@string/volume_panel_on_left_title"
-        android:summary="@string/volume_panel_on_left_summary"
-        android:defaultValue="false"
-        android:order="-28" />
+    <!-- NFC sounds -->
+    <SwitchPreference
+        android:key="nfc_sounds"
+        android:title="@string/nfc_sounds_title"
+        android:order="-28"/>
+
+    <!-- Show vibrate icon in status bar -->
+    <SwitchPreference
+        android:key="vibrate_icon"
+        android:title="@string/vibrate_icon_title"
+        android:order="-27"/>
 
     <!-- Dock speaker plays -->
     <DropDownPreference
@@ -236,6 +294,11 @@ x
         android:title="@string/emergency_tone_title"
         android:summary="%s"
         android:order="-10"/>
+
+    <!-- Screenshot sound -->
+    <SwitchPreference
+        android:key="screenshot_shutter_sound"
+        android:title="@string/screenshot_shutter_sound_title" />
 
     <Preference
         android:key="sound_work_settings"
