@@ -21,6 +21,10 @@
     android:key="my_device_info_pref_screen"
     android:title="@string/about_settings">
 
+    <PreferenceScreen
+        android:layout="@layout/yuki_about_layout"
+        android:selectable="false" />
+
     <com.android.settingslib.widget.LayoutPreference
         android:key="my_device_info_header"
         android:order="-1"

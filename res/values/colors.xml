@@ -219,4 +219,7 @@
 
     <!-- Icon tint color for battery usage system icon -->
     <color name="battery_usage_system_icon_color">?android:attr/textColorPrimary</color>
+
+    <!-- Import ShirayukiProject xdroidUI Style-->
+    <color name="yuki_pref_card_color">#fff3f4f5</color>
 </resources>
