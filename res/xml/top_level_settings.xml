@@ -51,6 +51,15 @@
         settings:controller="com.android.settings.connecteddevice.TopLevelConnectedDevicesPreferenceController"/>
 
     <com.android.settings.widget.HomepagePreference
+        android:key="top_level_yyuki_settings"
+        android:title="@string/yukispace_title"
+        android:summary="@string/yukispace_summary"
+        android:icon="@drawable/ic_yuki_icon"
+        android:order="-135"
+        android:fragment="com.yukiprjkt.yukispace.YukiSpace"
+        settings:highlightableMenuKey="@string/menu_key_yuki" />
+
+    <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.applications.AppDashboardFragment"
         android:icon="@drawable/ic_apps"
         android:key="top_level_apps"
