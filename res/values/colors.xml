@@ -222,4 +222,8 @@
 
     <!-- Import ShirayukiProject xdroidUI Style-->
     <color name="yuki_pref_card_color">#fff3f4f5</color>
+
+    <!-- OxygenOS SettingsUI Style-->
+    <color name="pref_card_color">#fff3f4f6</color>
+    <color name="pref_dot_color">#ffffffff</color>
 </resources>
